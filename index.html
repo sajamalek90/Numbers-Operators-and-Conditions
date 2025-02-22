@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers, Operators, and Conditions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Front-End Lecture ( JavaScript ) - Session 9</h1>
+        <nav>
+            <ul>
+                <li><h2><a href="#javascript">Numbers, Operators, and Conditions</a></h2></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- JavaScript Section -->
+        <section id="javascript">
+            <h2>Numbers, Operators, and Conditions</h2>
+
+            <!-- Number -->
+            <article>
+                <h3>Number</h3>
+                <p>JavaScript numbers can be integers or floating-point numbers. They are stored as 64-bit floating-point numbers.</p>
+                <pre><code>let num1 = 42; // Integer
+        let num2 = 3.14; // Floating-point number</code></pre>
+                <p><strong>Output:</strong> A screenshot of JavaScript code declaring numbers.</p>
+            </article>
+
+            <!-- Number Methods -->
+            <article>
+                <h3>Number Methods</h3>
+                <p>JavaScript provides several methods to work with numbers, such as <code>toString()</code>, <code>toFixed()</code>, and <code>parseInt()</code>.</p>
+                <pre><code>let num = 123.456;
+        console.log(num.toFixed(2)); // 123.46
+        console.log(num.toString()); // "123.456"</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of number methods.</p>
+            </article>
+
+            <!-- Math Object -->
+            <article>
+                <h3>Math Object</h3>
+                <p>The <code>Math</code> object provides mathematical functions and constants, such as <code>Math.PI</code>, <code>Math.sqrt()</code>, and <code>Math.random()</code>.</p>
+                <pre><code>console.log(Math.PI); // 3.141592653589793
+        console.log(Math.sqrt(16)); // 4
+        console.log(Math.random()); // Random number between 0 and 1</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of Math object methods.</p>
+            </article>
+
+            <!-- Number Challenge -->
+            <article>
+                <h3>Number Challenge</h3>
+                <p>Create a program that generates a random number between 1 and 100 and rounds it to the nearest integer.</p>
+                <pre><code>let randomNum = Math.random() * 100;
+        let roundedNum = Math.round(randomNum);
+        console.log(roundedNum);</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of the number challenge.</p>
+            </article>
+
+            <!-- String Methods -->
+            <article>
+                <h3>String Methods</h3>
+                <p>JavaScript provides several methods to manipulate strings, such as <code>toUpperCase()</code>, <code>toLowerCase()</code>, and <code>substring()</code>.</p>
+                <pre><code>let str = "Hello, World!";
+        console.log(str.toUpperCase()); // "HELLO, WORLD!"
+        console.log(str.substring(0, 5)); // "Hello"</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of string methods.</p>
+            </article>
+
+            <!-- Comparison Operators -->
+            <article>
+                <h3>Comparison Operators</h3>
+                <p>Comparison operators are used to compare two values. They return a boolean value (<code>true</code> or <code>false</code>).</p>
+                <pre><code>console.log(10 > 5); // true
+        console.log(10 == "10"); // true (loose equality)
+        console.log(10 === "10"); // false (strict equality)</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of comparison operators.</p>
+            </article>
+
+            <!-- Logical Operators -->
+            <article>
+                <h3>Logical Operators</h3>
+                <p>Logical operators are used to combine multiple conditions. They include <code>&&</code> (AND), <code>||</code> (OR), and <code>!</code> (NOT).</p>
+                <pre><code>console.log(true && false); // false
+        console.log(true || false); // true
+        console.log(!true); // false</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of logical operators.</p>
+            </article>
+
+            <!-- If Condition -->
+            <article>
+                <h3>If Condition</h3>
+                <p>The <code>if</code> statement is used to execute a block of code if a condition is true.</p>
+                <pre><code>let age = 18;
+        if (age >= 18) {
+            console.log("You are an adult.");
+        }</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of an if condition.</p>
+            </article>
+
+            <!-- Nested If Condition -->
+            <article>
+                <h3>Nested If Condition</h3>
+                <p>Nested <code>if</code> statements are used to check multiple conditions.</p>
+                <pre><code>let age = 18;
+        let hasLicense = true;
+        if (age >= 18) {
+            if (hasLicense) {
+                console.log("You can drive.");
+            }
+        }</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of a nested if condition.</p>
+            </article>
+
+            <!-- Conditional Ternary Operator -->
+            <article>
+                <h3>Conditional Ternary Operator</h3>
+                <p>The ternary operator is a shorthand for the <code>if-else</code> statement.</p>
+                <pre><code>let age = 18;
+        let status = (age >= 18) ? "Adult" : "Minor";
+        console.log(status); // "Adult"</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of a ternary operator.</p>
+            </article>
+
+            <!-- Nullish Coalescing Operator -->
+            <article>
+                <h3>Nullish Coalescing Operator</h3>
+                <p>The nullish coalescing operator (<code>??</code>) returns the right-hand operand if the left-hand operand is <code>null</code> or <code>undefined</code>.</p>
+                <pre><code>let value = null;
+        let result = value ?? "Default Value";
+        console.log(result); // "Default Value"</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of the nullish coalescing operator.</p>
+            </article>
+
+            <!-- If Condition Challenge -->
+            <article>
+                <h3>If Condition Challenge</h3>
+                <p>Create a program that checks if a number is positive, negative, or zero.</p>
+                <pre><code>let num = 5;
+        if (num > 0) {
+            console.log("Positive");
+        } else if (num < 0) {
+            console.log("Negative");
+        } else {
+            console.log("Zero");
+        }</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of the if condition challenge.</p>
+            </article>
+
+            <!-- Switch Statement -->
+            <article>
+                <h3>Switch Statement</h3>
+                <p>The <code>switch</code> statement is used to perform different actions based on different conditions.</p>
+                <pre><code>let day = "Monday";
+        switch (day) {
+            case "Monday":
+                console.log("Start of the workweek");
+                break;
+            case "Friday":
+                console.log("End of the workweek");
+                break;
+            default:
+                console.log("Midweek");
+        }</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of a switch statement.</p>
+            </article>
+
+            <!-- Switch And If Condition Challenge -->
+            <article>
+                <h3>Switch And If Condition Challenge</h3>
+                <p>Create a program that uses both <code>switch</code> and <code>if</code> to determine the day of the week and whether it's a weekday or weekend.</p>
+                <pre><code>let day = "Saturday";
+        switch (day) {
+            case "Monday":
+            case "Tuesday":
+            case "Wednesday":
+            case "Thursday":
+            case "Friday":
+                console.log("Weekday");
+                break;
+            case "Saturday":
+            case "Sunday":
+                console.log("Weekend");
+                break;
+            default:
+                console.log("Invalid day");
+        }</code></pre>
+                <p><strong>Output:</strong> A screenshot of the browser console showing the result of the switch and if condition challenge.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Flexbox & Grid Lecture Materials. All rights reserved.</p>
+        <p>Powered by: <a href="https://www.linkedin.com/in/saja-malek/">Saja Malek</a></p>
+    </footer>
+</body>
+</html>
