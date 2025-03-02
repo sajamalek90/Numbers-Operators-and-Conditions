@@ -24,9 +24,16 @@
             <!-- Number -->
             <article>
                 <h3>Number</h3>
-                <p>JavaScript numbers can be integers or floating-point numbers. They are stored as 64-bit floating-point numbers.</p>
-                <pre><code>let num1 = 42; // Integer
-        let num2 = 3.14; // Floating-point number</code></pre>
+                <p>The numbers can be integers or floating-point numbers. They are stored as 64-bit floating-point numbers. JavaScript numbers all the same.</p>
+                <pre><code>let num1 = 42; // Integer => number
+let num2 = 3.14; // Floating-point number => number
+        console.log(1000000); // number
+        console.log(1_000_000); // Sentactic sugar
+        console.log(1e6); // e
+        console.log(1000000.00); // with Decimal
+        console.log(BigInt(999999999999)); // Number + BigInt (Es6)
+        console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991 => Number Max safe
+        console.log(Number.MAX_VALUE); // 1.7976931348623157e+308 => Number Max Value</code></pre>
             </article>
 
             <!-- Number Methods -->
@@ -34,26 +41,84 @@
                 <h3>Number Methods</h3>
                 <p>JavaScript provides several methods to work with numbers, such as <code>toString()</code>, <code>toFixed()</code>, and <code>parseInt()</code>.</p>
                 <pre><code>let num = 123.456;
-        console.log(num.toFixed(2)); // 123.46
-        console.log(num.toString()); // "123.456"</code></pre>
+        console.log(num.toString()); // "123.456"
+        console.log(100..toString()); // "100"
+        console.log(num.toFixed(2)); // "123.46"
+
+        console.log(parseInt(num)); // 123
+        console.log(parseInt("100 Saja")); // 100
+        console.log(parseFloat(num)); // 123.456
+    
+        console.log(Number.isInteger("100")); // false => (Es6)
+        console.log(Number.isInteger(100.56)); // false
+        console.log(Number.isInteger(100)); // true
+
+        console.log(Number.isNaN("Saja")); // false => (Es6)
+        console.log(Number.isNaN("Saja" / 50)); // true</code></pre>
             </article>
 
             <!-- Math Object -->
             <article>
                 <h3>Math Object</h3>
                 <p>The <code>Math</code> object provides mathematical functions and constants, such as <code>Math.PI</code>, <code>Math.sqrt()</code>, and <code>Math.random()</code>.</p>
-                <pre><code>console.log(Math.PI); // 3.141592653589793
-        console.log(Math.sqrt(16)); // 4
-        console.log(Math.random()); // Random number between 0 and 1</code></pre>
+                <pre><code>console.log(Math.round(99.2)); // 99
+console.log(Math.round(99.6)); // 100
+console.log(Math.ceil(99.2)); // 100
+console.log(Math.floor(99.9)); // 99
+
+console.log(Math.min(10, 50, -30, 0, 100)); // -30
+console.log(Math.max(10, 50, -30, 0, 100)); // 100
+
+console.log(Math.random()); // Random number between 0 and 1
+
+console.log(Math.abs(-99)); // 99
+console.log(Math.pow(2, 4)); // 16
+
+console.log(Math.trunc(99.5)); // 99 "Return only integer part" (Es6)
+
+console.log(Math.PI); // 3.141592653589793
+console.log(Math.sqrt(16)); // 4</code></pre>
             </article>
 
             <!-- Number Challenge -->
             <article>
                 <h3>Number Challenge</h3>
-                <p>Create a program that generates a random number between 1 and 100 and rounds it to the nearest integer.</p>
-                <pre><code>let randomNum = Math.random() * 100;
-        let roundedNum = Math.round(randomNum);
-        console.log(roundedNum);</code></pre>
+                <pre class="challenge">
+                    let a = 1_00;
+                    let b = 2_00.5;
+                    let c = 1e2;
+                    let d = 2.4;
+                    
+                    // Find Smallest Number in All Variables And Return Integer 
+                    console.log();
+                    
+                    // Use Variable a + d One Time To Get The Needed Output 
+                    console.log(); // 10000
+                    
+                    // Get Integer "2" From d Variable With 4 Methods
+                    console.log();
+                    console.log();
+                    console.log();
+                    console.log();
+                    
+                    // Use Variables b + d To Get This Values
+                    console.log(); // 66.67 => String
+                    console.log(); // 67 => Number</pre>
+                <pre><code>// Find Smallest Number in All Variables And Return Integer
+console.log(Math.trunc(Math.min(a, b, c, d,)));
+
+// Use Variable a + d One Time To Get The Needed Output
+console.log(a ** parseInt(d)); // 10000
+
+// Get Integer "2" From d Variable With 4 Methods
+console.log(parseInt(d));
+console.log(Math.round(d));
+console.log(Math.floor(d));
+console.log(Math.trunc(d));
+
+// Use Variables b + d To Get This Values
+console.log((parseInt(b) / Math.ceil(d)).toFixed(2)); // 66.67 => String
+console.log(Math.round(parseInt(b) / Math.ceil(d))); // 67 => Number</code></pre>
             </article>
 
             <!-- String Methods -->
@@ -63,6 +128,13 @@
                 <pre><code>let str = "Hello, World!";
         console.log(str.toUpperCase()); // "HELLO, WORLD!"
         console.log(str.substring(0, 5)); // "Hello"</code></pre>
+            </article>
+
+            <!-- String Challenge -->
+            <article>
+                <h3>String Challenge</h3>
+                <pre class="challenge"></pre>
+                <pre><code></code></pre>
             </article>
 
             <!-- Comparison Operators -->
