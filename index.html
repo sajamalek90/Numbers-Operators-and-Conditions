@@ -126,15 +126,120 @@ console.log(Math.round(parseInt(b) / Math.ceil(d))); // 67 => Number</code></pre
                 <h3>String Methods</h3>
                 <p>JavaScript provides several methods to manipulate strings, such as <code>toUpperCase()</code>, <code>toLowerCase()</code>, and <code>substring()</code>.</p>
                 <pre><code>let str = "Hello, World!";
+        console.log(str[1]); // "e"
+        console.log(str[13]); // undefined
+        
+        console.log(str.charAt(1)); // "e"
+        console.log(str.charAt(13)); // 
+
+        console.log(str.length); // 13
+
+        str = " Hello, World! ";
+        console.log(str.length); // 15
+        console.log(str.trim()); // "Hello, World!"
+        console.log(str.length); // 13
+
+        str = "Hello, World!";
         console.log(str.toUpperCase()); // "HELLO, WORLD!"
-        console.log(str.substring(0, 5)); // "Hello"</code></pre>
+        console.log(str.toLowerCase()); // "hello, world!"
+
+        ==================================================
+
+        // indexOf(Value [Mandatory], Start [Optional] 0)
+            console.log(str.indexOf("World")); // 7
+            console.log(str.indexOf("World", 8)); // -1
+            console.log(str.indexOf("o")); // 4
+
+        // lastIndexOf(Value [Mandatory], Start [Optional] length)
+            console.log(str.lastIndexOf("o")); // 8
+
+        // slice(Start [Mandatory], End [Optional] Not include end)
+            console.log(str.slice(2)); // "llo, World!"
+            console.log(str.slice(2, 5)); // "llo"
+            console.log(str.slice(-2)); // "d!"
+            console.log(str.slice(-6, -2)); // "worl"
+        
+        // repeat(Times) => Es6
+            console.log(str.repeat(3)); // "Hello, World! Hello, World! Hello, World!"
+
+        // split(Separator [Optional], Limit [Optional])
+            console.log(str.split()); // ["Hello World!"]
+            console.log(str.split("")); // ["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d", "!"]
+            console.log(str.split("", 5)); // ["H", "e", "l", "l", "o"]
+
+        ===============================================================================================
+
+        // substring(Start [Mandatory], End [Optional] Not include end)
+            console.log(str.substring(0)); // "Hello, World!"
+            console.log(str.substring(2, 6)); // "llo,"
+            console.log(str.substring(6, 2)); // "llo,"
+            console.log(str.substring(-10)); // "Hello, World!"
+            console.log(str.substring(-10, 6)); // "Hello,"
+            console.log(str.substring(str.length - 1)); // "!"
+        
+        // substr(Start [Mandatory], Characters to extract)
+            console.log(str.substr(0)); // "Hello, World"
+            console.log(str.substr(0, 6)); // "Hello,"
+            console.log(str.substr(17)); // 
+            console.log(str.substr(-3)); // "ld!"
+            console.log(str.substr(-6, 2)); // "Wo"
+        
+        // includes(Value [Mandatory], Start [Optional] 0) => Es6
+            console.log(str.includes("World")); // true
+            console.log(str.includes("Hello", 6)); // false
+        
+        // startsWith(Value [Mandatory], Start [Optional] 0) => Es6
+            console.log(str.startsWith("H")); // true
+            console.log(str.startsWith("H", 2)); // false
+            console.log(str.startsWith("l", 2)); // true
+        
+        // endsWith(Value [Mandatory], Length [Optional] full length) => Es6
+            console.log(str.endsWith("!")); // true
+            console.log(str.endsWith("!", 2)); // false
+            console.log(str.endsWith("l", 3)); // true</code></pre>
             </article>
 
             <!-- String Challenge -->
             <article>
                 <h3>String Challenge</h3>
-                <pre class="challenge"></pre>
-                <pre><code></code></pre>
+                    <pre class="challenge">
+                    /* String Challenge:
+                        - All Solutions Must Be In One Chain
+                        - You Can Use Concatenate
+                    */
+
+                    let a = "Elzero Web School";
+
+                    // Include This Methods In Your Solution [slice, charAt] 
+                    console.log(); // Zero
+
+                    // 8 H
+                    console.log(); // HHHHHHHH
+
+                    // Return Array
+                    console.log(); // [Elzero]
+
+                    // Use Only "substr" Method + Template Literals In Your Solution 
+                    console.log(); // Elzero School
+
+                    // Solution Must Be Dynamic And String May Change
+                    console.log(); // elZERO WEB SCHOOL</pre>
+                <pre><code>// Include This Methods In Your Solution [slice, charAt]
+console.log(a.charAt(2).toUpperCase() + a.slice(3, 6)); // Zero
+
+// 8 H
+console.log(a[13].toUpperCase().repeat(8)); // HHHHHHHH
+
+// Return Array
+console.log(a.split(" ", 1)); // [Elzero]
+
+// Use Only "substr" Method + Template Literals In Your Solution
+console.log(a.substr(0, 7) + a.substr(11, 6)); // Elzero School
+
+// Solution Must Be Dynamic And String May Change
+console.log(a[0].toLowerCase() + a.substring(1, a.length - 1).toUpperCase() 
+                               + a.substring(a.length - 1).toLowerCase()); // Elzero School
+                </code></pre>
             </article>
 
             <!-- Comparison Operators -->
@@ -142,8 +247,8 @@ console.log(Math.round(parseInt(b) / Math.ceil(d))); // 67 => Number</code></pre
                 <h3>Comparison Operators</h3>
                 <p>Comparison operators are used to compare two values. They return a boolean value (<code>true</code> or <code>false</code>).</p>
                 <pre><code>console.log(10 > 5); // true
-        console.log(10 == "10"); // true (loose equality)
-        console.log(10 === "10"); // false (strict equality)</code></pre>
+console.log(10 == "10"); // true (loose equality)
+console.log(10 === "10"); // false (strict equality)</code></pre>
             </article>
 
             <!-- Logical Operators -->
@@ -151,8 +256,8 @@ console.log(Math.round(parseInt(b) / Math.ceil(d))); // 67 => Number</code></pre
                 <h3>Logical Operators</h3>
                 <p>Logical operators are used to combine multiple conditions. They include <code>&&</code> (AND), <code>||</code> (OR), and <code>!</code> (NOT).</p>
                 <pre><code>console.log(true && false); // false
-        console.log(true || false); // true
-        console.log(!true); // false</code></pre>
+console.log(true || false); // true
+console.log(!true); // false</code></pre>
             </article>
 
             <!-- If Condition -->
